@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Bookshelf Apps</title>
+    <link rel="shortcut icon" href="image/book-stack.png">
+</head>
+<body>
+    <header>
+        <div class="jumbotron">
+            <div class="tagline">
+                <p id="lg-title">Bookshelf Apps</p>
+                <input type="image" class="arrow_bot" onclick="tomain()" src="image/arrow.png">
+            </div>
+            <img class="top-img" src="image/jumbotron.jpg" alt="">
+        </div>
+    </header>
+
+    <main>
+        <div id="section1">
+            <p class="judul_masuk">New Book</p>
+              <form id="formBook">
+                <div class="input">
+                  <input class="inputBook" id="inputTitle" type="text" placeholder="Title" required>
+                </div>
+                <div class="input">
+                  <input class="inputBook" id="inputWriter" type="text" placeholder="Writer" required>
+                </div>
+                <div class="input">
+                  <input class="inputBook" id="inputYear" type="number" placeholder="Year" required>
+                </div>
+                <div class="input_inline">
+                  <label for="check_readed">Already Read</label>
+                  <input id="check_readed" type="checkbox">
+                </div>
+                <button id="bookSubmit" type="button">Add</button>
+              </form>
+
+              <hr class="batas">
+
+              <p class="judul_masuk">Search Book</p>
+              <form id="searchBook">
+                <input class="inputBook" id="inputSearch" type="text" placeholder="Search Title">
+                <button id="searchSubmit" type="submit">Search</button>
+              </form>
+              <div class="hasil" id="search_sec">
+              </div>
+        </div>
+
+        <div id="section2">
+            <p class="judul_masuk">Unread</p>
+            <div class="hasil" id="unread_book">
+            </div>
+
+            <hr class="batas">
+
+            <p class="judul_masuk">Readed</p>
+            <div class="hasil" id="readed_book">
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <p>Copyright &#169; 2022, Fajar Maulana</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

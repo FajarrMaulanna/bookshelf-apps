@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+$putih : #EEEEEE;
+$font1 : 'Montserrat', sans-serif;
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: $putih;
+}
+header{
+    background-color: black;
+    .jumbotron{
+        .top-img{
+            width: 100%;
+            opacity: 0.5;
+            position: relative;
+        }
+        .tagline{
+            #lg-title{
+                font-size: 50px;
+                margin: 0;
+            }
+            .arrow_bot{
+                width: 3%;
+                position: relative;
+                animation: arrowmove 1s infinite;
+            }
+            @keyframes arrowmove {
+                0% {top: 0px;}
+                50% {top: 10px;}
+                100% {top: 0px;}
+            }
+            position: absolute;
+            z-index: 99;
+            text-align: center;
+            width: 100%;
+            top: 45%;
+            font-family: $font1;
+            color: $putih;
+        }
+    }
+}
+
+main{
+    position: relative;
+    padding: 20px;
+    top: 20px;
+    overflow: auto;
+    #section1{
+        float: left;
+        width: 49%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        border-radius: 5px;
+        .judul_masuk{
+            font-family: $font1;
+            font-size: 25px;
+            text-align: center;
+        } 
+        .input_inline{
+            font-family: $font1;
+        }
+        .inputBook{
+            border: 2px solid #DADDEC;
+            margin: 5px 0 10px;
+            font-size: 1rem;
+            color: #656880;
+        }
+        .inputBook, button {
+            width: 100%;
+            border: none;
+            padding: 14px;
+            border-radius: 3px;
+        }
+        .input_inline{
+            margin: 12px 0;
+            display: flex;
+        }
+        button {
+            background-image: linear-gradient(to right, #89CAFF, #6589FF);
+            display: block;
+            color: $putih;
+            font-size: 1rem;
+            box-shadow: none;
+            transition: box-shadow .3s ease-in-out;
+            cursor: pointer;
+        }
+        button:hover {
+            box-shadow: 0 5px 20px #89caff94;
+        }
+        .batas{
+            width: 100%;
+            float: left;
+            border: solid 2px;
+            margin-bottom: 20px;
+            border-color: #6589FF;
+            margin-top: 40px;
+        }
+        .result_search{
+            width: 99%;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            font-family: $font1;
+            display: inline-block;
+        }
+    }
+    #section2{
+        float: right;
+        width: 49%;
+        padding: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        .judul_masuk{
+            font-family: $font1;
+            font-size: 25px;
+            text-align: center;
+        }
+        .unread_book{
+            width: 99%;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            font-family: $font1;
+            display: inline-block;
+        }
+        .batas{
+            width: 100%;
+            float: left;
+            border: solid 2px;
+            margin-bottom: 20px;
+            border-color: #6589FF;
+            margin-top: 40px;
+        }
+        .readed_book{
+            width: 99%;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            font-family: $font1;
+            display: inline-block;
+        }
+    }
+}
+
+.btn_sec{
+    float: right;
+    .green_btn{
+        background-image: linear-gradient(to right, #4CAF50, #04AA6D);
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+    .red_btn{
+        background-image: linear-gradient(to right, #f41212, #b34040);
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+    .yellow_btn{
+        background-image: linear-gradient(to right, #c1bf43, #fff200);
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+    .blue_btn{
+        background-image: linear-gradient(to right, #89CAFF, #6589FF);
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+}
+
+footer{
+    padding: 5px;
+    background-color: #000000;
+    margin-top: 20px;
+    p{
+        color: $putih;
+        text-align: center;
+        font-family: $font1;
+        font-size: 13px;
+    }
+}
+
+//RESPONSIVE
+@media (min-width: 320px) and (max-width: 600px) {
+    header{
+        .jumbotron{
+            .tagline{
+                #lg-title{
+                    font-size: 35px;
+                    margin: 0;
+                }
+                .arrow_bot{
+                    width: 5%;
+                }
+                top: 15%;
+            }
+        }
+    }
+    main{
+        #section1{
+            width: 100%;
+        }
+        #section2{
+            width: 100%;
+        }
+    }
+}
